@@ -2,6 +2,9 @@ on:
  push:
    branches: [ feat-pipeline-setup ]
   
+ pull-request:
+  branches:
+    - [main]
 defaults:
   run:
     working-directory: ./MathWorkshop
