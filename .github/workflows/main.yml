@@ -3,8 +3,9 @@ on:
    branches: [ feat-pipeline-setup ]
   
 defaults:
-run:
-  working-directory: ./MathWorkshop
+  run:
+    working-directory: ./MathWorkshop
+
 jobs:
  build:
    runs-on: ubuntu-latest
