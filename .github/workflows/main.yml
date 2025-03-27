@@ -5,7 +5,7 @@ on:
 defaults:
   run:
     working-directory: ./MathWorkshop
-Using: https://github.com/marketplace/actions/publish-test-results
+
 permissions:
  checks: write
  pull-requests: write
