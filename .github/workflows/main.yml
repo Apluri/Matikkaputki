@@ -1,6 +1,6 @@
 on:
  push:
-   branches: [ main ]
+   branches: [ feat-pipeline-setup ]
 jobs:
  build:
    runs-on: ubuntu-latest
