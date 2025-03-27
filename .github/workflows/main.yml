@@ -5,8 +5,13 @@ on:
 defaults:
   run:
     working-directory: ./MathWorkshop
+Using: https://github.com/marketplace/actions/publish-test-results
+permissions:
+ checks: write
+ pull-requests: write
 
 jobs:
+
  build:
    runs-on: ubuntu-latest
    steps:
@@ -21,5 +26,9 @@ jobs:
    - run: dotnet build
      name: run dotnet build
 
-   - run: dotnet test
+   - run: dotnet test --logger "trx;LogFileName=report.trx" --results-directory ./test-output
      name: tests
+   - name: Publish test results
+     uses: EnricoMi/publish-unit-test-result-action@v2
+     with:
+       files: ./MathWorkshop/test-output/*.trx
