@@ -3,7 +3,7 @@ on:
    branches: [ feat-pipeline-setup ]
   
  pull-request:
-  branches:
+   branches:
     - [main]
 defaults:
   run:
